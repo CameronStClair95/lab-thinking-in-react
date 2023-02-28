@@ -1,5 +1,4 @@
 // src/components/ProductsPage.js
-
 import { useState } from 'react';
 import jsonData from '../data.json';
 import ProductTable from './ProductTable';
@@ -13,7 +12,7 @@ function ProductsPage () {
 
         <h1>IronStore</h1>
         <SearchBar></SearchBar>
-        <ProductTable></ProductTable>
+        <ProductTable products={products}></ProductTable>
       </div>    
   )
 }

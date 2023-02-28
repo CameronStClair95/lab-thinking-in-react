@@ -1,24 +1,20 @@
 import React from 'react';
+import ProductRow from './ProductRow';
 
-function ProductTable() {
+function ProductTable(props) {
   return (
     <table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+        </tr>
+       {props.products.map((product) => {
+        return(
+                <ProductRow key={product.id} products={product} ></ProductRow>
+        )
+       })}
+    </table>
   );
 }
 
