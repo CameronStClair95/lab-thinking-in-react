@@ -1,12 +1,12 @@
 // import React from 'react';
 
-function SearchBar() {
+function SearchBar(props) {
   return (
     <div>
         <label htmlFor="=">
-            Search for Product...
+            Search for Product:
 
-        <input type="text" />
+        <input type="text" onChange={(e) => props.handleSearch(e.target.value)} />
 
         </label>
     </div>
